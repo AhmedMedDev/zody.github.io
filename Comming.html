@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         
+        <!------------------BOOTSTRAB------------------------------------------------------------------------->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <!------------------END BOOTSTRAB------------------------------------------------------------------------->
+        
+        <!------------------SLICK SLIDER------------------------------------------------------------------------->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <!------------------END SLICK SLIDER------------------------------------------------------------------------->
+        
+       
+        <!------------------FONTS------------------------------------------------------------------------->
+        
+        <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- font-family: 'MuseoModerno', cursive;-->
+        
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- font-family: 'Sora', sans-serif;-->
+        <!---------------END FONTS------------------------------------------------------------------------->
+        
+        
+        <title>ZODY Comming page</title>
+        <link rel="icon" href="img/favicon.svg">
+        
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <div class="comming">
+            <div class="container">
+                <div class="content">
+                    <div class="logo">
+                        <img src="img/logo.svg" alt="">
+                        <h5>ZODY</h5>
+                    </div>
+                    <h1>Zody is Almost Ready</h1>
+                    <div class="commingContent">
+                        <h6>Notify me when it’s ready</h6>
+                        <p>Please let us know your email</p>
+                        <div class="disF">
+                            <input type="email" id="email" placeholder="Email" class="email ">
+                            <div class="">
+                                <button>I want to be first!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="countDown">
+                       <p>Time left until launching</p>
+                        <div id="clock">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.js"></script>
+        
+        <script src="js/slick.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("September 28, 2021 15:37:25").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+              // Get today's date and time
+              var now = new Date().getTime();
+
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              // Output the result in an element with id="demo"
+              document.getElementById("clock").innerHTML = days + " : " + hours + " : "
+              + minutes + " : " + seconds + " ";
+
+              // If the count down is over, write some text 
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("clock").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+        </script>
+    </body>
+</html>
