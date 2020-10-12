@@ -279,7 +279,7 @@ p{
 .lorem{
     padding: 5% 0;
     background: #fff;
-    
+    overflow: hidden
 }
 .lorem .content{}
 .lorem .content .loremHeader{
@@ -391,6 +391,7 @@ p{
 .what{
     padding: 5% 0;
     background: #F2F3FE;
+    overflow: hidden
 }
 .what .content{}
 .what .content .whatHeader{
